@@ -55,11 +55,23 @@
     white-space: nowrap;
   }
   .role {
-    margin: 0 0 56px;
+    margin: 0 0 18px;
     max-width: 26em;
     font-size: 20px;
     line-height: 1.45;
   }
+  .dl {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin: 0 0 56px; padding: 9px 16px;
+    border: 1px solid var(--accent); border-radius: 2px;
+    color: var(--accent); background: transparent;
+    font: 400 13px/1 var(--mono); letter-spacing: .02em;
+    text-decoration: none; transition: background .15s, color .15s;
+  }
+  .dl:hover, .dl:focus-visible {
+    background: var(--accent); color: var(--paper); text-decoration: none;
+  }
+  .dl svg { width: 13px; height: 13px; flex: none; }
 
   .row {
     display: grid;
@@ -76,9 +88,7 @@
     grid-template-columns: 1fr;
     gap: 14px 24px;
   }
-  /* di layar sempit, email/github jangan pecah mid-word */
-  .contact dd a { display: inline-block; overflow-wrap: break-word;
-                  word-break: normal; hyphens: none; }
+  .contact dd a { display: inline-block; }
   @media (min-width: 480px) {
     .contact { grid-template-columns: 1fr 1fr; gap: 18px 24px; }
   }
@@ -127,6 +137,15 @@
   <header>
     <h1>Vladimir Isanovski</h1>
     <p class="role">Web3 community management, moderation, and content/research.</p>
+    <a class="dl" href="cv.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download CV (PDF)
+    </a>
   </header>
 
   <main>
@@ -153,14 +172,14 @@
       </div>
       <div>
         <dt>languages</dt>
-        <dd>Indonesian (native), English (conversational)</dd>
+        <dd>Indonesian, English</dd>
       </div>
     </dl>
 
     <section class="row" id="about" aria-labelledby="l-about">
       <div class="label" id="l-about">about</div>
       <div class="value">
-        <p>I have spent four years in crypto as an active user: following airdrop projects, joining their Discord and Telegram communities, and helping other members through the same confusion I had at the start. Claims, wallets, schedules, scam warnings.</p>
+        <p>I spent four years in crypto as an active user: following airdrop projects and joining their Discord and Telegram communities. That gave me a working understanding of web3, crypto, and blockchain from the user side: how claims, vesting, and token unlocks work, how to keep a wallet safe, how to read a block explorer, and how to spot a scam before it costs someone their funds.</p>
         <p>I am looking for roles in community support, moderation, and content/research. I write short, clear answers and check the documentation before replying.</p>
       </div>
     </section>
@@ -174,9 +193,9 @@
           <li>Walrus</li>
           <li>Plume</li>
           <li>Caldera</li>
-          <li>Monad</li>
+          <li>Meteora</li>
         </ul>
-        <p>Active as a member and helper, mostly on Discord and Telegram. I have not held an official moderator or ambassador title.</p>
+        <p>Previously a regular member, mostly on Discord and Telegram. I have not held an official role such as moderator or ambassador.</p>
       </div>
     </section>
 
