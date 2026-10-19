@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vladimir Isanovski — Crypto Support &amp; Content</title>
+<meta name="description" content="Support and content portfolio: crypto user-side experience, sample support replies, macro pack, and writing samples.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#16181c; --muted:#6b7280; --line:#e5e7eb;
+    --soft:#f7f8fa; --accent:#1a1d21;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0e1013; --fg:#e8eaed; --muted:#9aa0a6; --line:#262a2f;
+           --soft:#16191d; --accent:#f1f3f5; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg); font-family:var(--sans);
+    font-size:16.5px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 22px 96px}
+  header{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:38px}
+  h1{font-size:2.05rem;line-height:1.15;letter-spacing:-.025em;margin:0 0 6px;font-weight:700}
+  .role{color:var(--muted);font-size:1.02rem;margin:0 0 14px}
+  .contact{font-size:.88rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .contact a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+  .contact a:hover{color:var(--fg);border-color:var(--fg)}
+  h2{
+    font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin:44px 0 16px;
+    padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+  h3{font-size:1.02rem;margin:26px 0 6px;letter-spacing:-.01em;font-weight:650}
+  p{margin:0 0 14px}
+  .lede{font-size:1.09rem;color:var(--fg)}
+  .note{color:var(--muted);font-size:.9rem;margin:-4px 0 18px}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{margin-bottom:7px}
+  strong{font-weight:650}
+  em{font-style:italic}
+
+  .steps{margin:0;padding:0;list-style:none;counter-reset:s}
+  .steps li{
+    counter-increment:s; position:relative; padding-left:34px; margin-bottom:16px;
+  }
+  .steps li::before{
+    content:counter(s); position:absolute; left:0; top:1px;
+    width:22px;height:22px;border-radius:50%;background:var(--soft);
+    border:1px solid var(--line); color:var(--muted);
+    font-family:var(--mono); font-size:.74rem; font-weight:600;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps .t{font-weight:650;display:block;margin-bottom:2px}
+
+  .qa{
+    border-left:2px solid var(--line); padding:2px 0 2px 18px; margin:0 0 26px;
+  }
+  .qa .q{font-weight:650;margin:0 0 8px}
+  .qa .a{margin:0}
+  .qa-wrap:target{background:var(--soft)}
+
+  pre{
+    font-family:var(--mono); font-size:.83rem; line-height:1.66;
+    background:var(--soft); border:1px solid var(--line); border-radius:8px;
+    padding:16px 18px; overflow-x:auto; margin:0 0 24px;
+    white-space:pre-wrap; word-break:break-word;
+  }
+  .post{
+    border:1px solid var(--line); border-radius:10px; padding:18px 20px;
+    margin:0 0 16px; background:var(--soft);
+  }
+  .post .who{font-family:var(--mono);font-size:.76rem;color:var(--muted);margin:0 0 10px}
+  .post .body{margin:0 0 10px;white-space:pre-line}
+  .post .why{margin:0;font-size:.85rem;color:var(--muted);font-style:italic}
+
+  .honest{
+    background:var(--soft);border:1px solid var(--line);border-radius:10px;
+    padding:22px 24px;margin:34px 0 0;
+  }
+  .honest p:last-child{margin-bottom:0}
+  footer{
+    margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:.82rem;color:var(--muted);
+  }
+  footer a{color:var(--muted)}
+  nav.toc{font-size:.87rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:5px 16px;margin:20px 0 0}
+  nav.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{color:var(--fg);border-color:var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Vladimir Isanovski</h1>
+  <p class="role">Crypto Support &amp; Content — user-side since 2023</p>
+  <div class="contact">
+    <span>Indonesia · Remote (UTC+7)</span>
+    <a href="https://x.com/isanovski">X @isanovski</a>
+    <a href="mailto:EMAIL_HERE" id="mail">EMAIL_HERE</a>
+  </div>
+  <nav class="toc">
+    <a href="#how">How I work</a>
+    <a href="#replies">Support replies</a>
+    <a href="#macros">Macro pack</a>
+    <a href="#faq">FAQ sample</a>
+    <a href="#writing">Writing samples</a>
+    <a href="#honest">What I'm not claiming</a>
+  </nav>
+</header>
+
+<h2 id="what">What this is</h2>
+<p class="lede">
+  A working sample set, not a claim reel. Everything below is written the way I
+  would actually answer a user or publish a post — sourced from public product
+  documentation, checked before writing, kept short enough that someone reading
+  on a phone gets the answer in one screen.
+</p>
+<p>
+  I have been on the <em>user</em> side of crypto support since 2023: airdrops,
+  vesting claims, locked tokens, wrong-wallet submissions, exchange deposit
+  addresses that cannot receive a claim. That is where the questions in this
+  document come from. I know what users ask because I have asked it.
+</p>
+
+<h2 id="how">How I work</h2>
+<ol class="steps">
+  <li><span class="t">Read first</span>
+      Open the product's own help centre and find the exact article. If it does
+      not exist, that is a documentation gap — worth flagging, not guessing.</li>
+  <li><span class="t">Reproduce</span>
+      Walk the flow in the app before answering. An answer that has not been
+      tested is a guess with confidence.</li>
+  <li><span class="t">Answer short</span>
+      Steps in order, no preamble. One screen on mobile. If it needs more than
+      six lines, it needs a screenshot or a link.</li>
+  <li><span class="t">Name the limit</span>
+      If the fix is not mine to make, say who owns it and what happens next.
+      Never leave a user guessing whether anyone is working on it.</li>
+  <li><span class="t">Turn it into a macro</span>
+      If a question arrives twice, it becomes a saved reply and a FAQ entry.
+      Same question three times is a documentation failure, not a support one.</li>
+</ol>
+
+<h2 id="replies">Sample support replies</h2>
+<p class="note">Topics drawn from public Streamflow documentation — vesting, claiming,
+token locks, cancel flow. Written as live chat replies.</p>
+
+<div class="qa">
+  <p class="q">1. “My claim button is greyed out — nothing to claim?”</p>
+  <p class="a">
+    Two things to check. First, is the vesting <strong>cliff</strong> over yet?
+    Nothing unlocks before the cliff date, even if the contract is active. Second,
+    open the contract detail page and look at <em>Claimable</em> — that number is
+    what the button reads. If Claimable is 0, there is nothing to withdraw yet and
+    the button is working correctly. If Claimable shows a number but the button
+    stays disabled, send me the contract address and I will check the on-chain
+    state.
+  </p>
+</div>
+
+<div class="qa">
+  <p class="q">2. “I created a vesting contract for my team. Can I cancel it later?”</p>
+  <p class="a">
+    Only if cancellation was enabled when the contract was created. At setup the
+    sender chooses whether the sender, the recipient, or neither may cancel — that
+    permission is fixed at deployment and cannot be added afterwards. To check:
+    open the contract and look at the details panel for the cancel permission. If
+    neither party was given it, the contract runs to completion. If it was
+    enabled, cancel from the three-dot menu on the contract row.
+  </p>
+</div>
+
+<div class="qa">
+  <p class="q">3. “I used my Binance deposit address as the vesting recipient. Now what?”</p>
+  <p class="a">
+    Centralised exchange wallets cannot sign a claim transaction, so a contract
+    paying into an exchange address has to use <strong>Auto-Claim</strong> — then
+    the unlocked tokens are pushed straight to that address instead of waiting for
+    a signature. If Auto-Claim was not enabled, the tokens are not lost: they are
+    still in the contract, but only the recipient address can claim them, and an
+    exchange will not do that for you. The practical fix is to create a new
+    contract paying to a wallet you control, then cancel or let the old one run
+    out.
+  </p>
+</div>
+
+<div class="qa">
+  <p class="q">4. “Why did I receive tokens I never bought?”</p>
+  <p class="a">
+    Almost always an airdrop. Before you touch them, check two things: whether the
+    token's mint authority is still active, and whether the token appears in the
+    project's own official announcement. Unsolicited tokens that require you to
+    visit a link and connect your wallet to “claim more” are the most common drain
+    pattern in this space — the token itself is the bait, not the reward. If you
+    want to be rid of it, burn the token account rather than interacting with any
+    site it points to.
+  </p>
+</div>
+
+<div class="qa">
+  <p class="q">5. “The stream stopped paying out mid-schedule. Is the contract broken?”</p>
+  <p class="a">
+    Usually not broken — empty. A streaming contract pays from the balance that
+    was funded into it; if the sender did not top it up, the stream pauses when
+    the balance hits zero and resumes once more is added. Open the contract and
+    compare <em>Amount deposited</em> with <em>Amount streamed</em>. If deposited
+    is lower, the sender needs to top up. If deposited is higher and it is still
+    not paying, that is worth escalating with the contract address — send it over.
+  </p>
+</div>
+
+<h2 id="macros">Support macro pack</h2>
+<p class="note">Ten saved replies for a live chat queue. Short by design — they get
+pasted into a conversation, not printed.</p>
+
+<pre>01 · ASK FOR THE ADDRESS
+Before I can check anything I need the contract address (not the token
+address) and the wallet you are claiming from. Copy from the app URL.
+
+02 · CLIFF EXPLANATION
+Nothing unlocks before the cliff date — that is expected behaviour, not a
+bug. After the cliff, tokens unlock on the schedule in the contract.
+
+03 · WRONG NETWORK
+That address is on a different network than this app uses. Sending here will
+not credit your account. Confirm the network in your wallet before you sign.
+
+04 · EXCHANGE AS RECIPIENT
+Exchange wallets cannot sign claims. Use Auto-Claim so tokens are pushed to
+the address instead of waiting for a signature.
+
+05 · TRANSACTION PENDING
+It is still in the queue, not failed. Give it a minute, then check the
+explorer link. If it shows as dropped, resubmit — nothing was charged.
+
+06 · CANNOT CANCEL
+Cancellation permission is set when the contract is created and cannot be
+added later. If neither party was granted it, the contract runs to completion.
+
+07 · TOKENS RECEIVED, DID NOT BUY
+Most likely an airdrop. Do not connect your wallet to any site it points to.
+Check the project's official channel before interacting.
+
+08 · ESCALATING A BUG
+Thanks — I have reproduced this and passed it to the team with your contract
+address and a timestamp. I will come back to you here when there is an update.
+
+09 · SCOPE LIMIT
+I cannot sign or move funds on your behalf, and no one from support will ever
+ask for a seed phrase or private key. Anyone who does is impersonating us.
+
+10 · CLOSING WITH A POINTER
+Sorted. If it comes back, reply here and reference this thread — the context
+is saved on my side.</pre>
+
+<h2 id="faq">FAQ sample — “My claim is not showing up”</h2>
+<p class="note">Written as a self-serve article, the format a help centre actually
+needs: cause first, fix second, escalation last.</p>
+
+<h3>Why the number is zero</h3>
+<p>
+  A vesting contract releases tokens on a schedule, and most schedules start with
+  a cliff — a period where nothing unlocks at all. Before the cliff date the
+  claimable amount is genuinely zero. This is the single most common reason
+  someone believes their allocation disappeared.
+</p>
+
+<h3>Check in this order</h3>
+<ul>
+  <li><strong>Cliff date.</strong> Contract detail page → schedule. If today is
+      before the cliff, wait; there is nothing to fix.</li>
+  <li><strong>Claimable amount.</strong> If it shows a number but the button is
+      disabled, the issue is the wallet connection, not the contract.</li>
+  <li><strong>Right wallet.</strong> The contract pays one specific address. If
+      you are connected with a different wallet, you will see the contract but
+      not the allocation.</li>
+  <li><strong>Right contract.</strong> Airdrop allocations and vesting contracts
+      are separate objects. Check both before concluding anything is missing.</li>
+</ul>
+
+<h3>When it is genuinely a problem</h3>
+<p>
+  If the cliff has passed, the connected wallet is the recipient address, and
+  Claimable is above zero but the claim transaction fails — that needs a human.
+  Send the contract address and the transaction signature. Do not send your seed
+  phrase; no support process requires it.
+</p>
+
+<h2 id="writing">Writing samples</h2>
+<p class="note">Three posts written for X. Hook first, one idea each, no thread
+padding. Topics are token distribution — the category I know best.</p>
+
+<div class="post">
+  <p class="who">@isanovski · token unlocks</p>
+  <p class="body">everyone checks the unlock date. almost nobody checks who the unlock is going to.
+
+a 2% unlock is nothing if it goes to 400 community wallets.
+the same 2% is the whole chart if it goes to one.</p>
+  <p class="why">Why it works: the reader already believes the first half. The
+  second half reframes a number they thought they understood.</p>
+</div>
+
+<div class="post">
+  <p class="who">@isanovski · vesting</p>
+  <p class="body">“locked” and “vested” are not the same thing and the difference is usually where people get hurt.
+
+locked = cannot move until a date.
+vested = unlocks gradually, on a schedule, whether you are watching or not.</p>
+  <p class="why">Why it works: corrects a real confusion with two lines the
+  reader can repeat to someone else.</p>
+</div>
+
+<div class="post">
+  <p class="who">@isanovski · airdrop safety</p>
+  <p class="body">if a token you never bought tells you to connect your wallet to “claim more”, the token is not the reward. it is the bait.
+
+check the mint authority before you check the price.</p>
+  <p class="why">Why it works: actionable in one sentence, and it is the
+  highest-value warning in the category.</p>
+</div>
+
+<div class="honest" id="honest">
+  <h2 style="margin-top:0;border:0;padding:0">What I am not claiming</h2>
+  <p>
+    I have not held a paid support or moderator title. What I bring is three years
+    of using these products from the user side, the writing, and the habit of
+    checking the documentation before answering. If a role needs someone who has
+    already processed a thousand tickets, that is a fair reason to pass — but the
+    answers above are what those tickets look like, and I wrote them before being
+    asked.
+  </p>
+</div>
+
+<footer>
+  <p>
+    Vladimir Isanovski · <a href="https://x.com/isanovski">@isanovski</a> ·
+    <a href="mailto:EMAIL_HERE">EMAIL_HERE</a>
+  </p>
+  <p>
+    Samples reference public product documentation. No user data, no private keys,
+    and no real account details appear on this page.
+  </p>
+</footer>
+
+</div>
+<script>
+  // ganti placeholder email sekali di satu tempat
+  (function(){
+    var addr = "EMAIL_HERE";
+    if (addr.indexOf("EMAIL_HERE") === 0) return;
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+      a.href = "mailto:" + addr;
+      if (a.textContent.trim() === "EMAIL_HERE") a.textContent = addr;
+    });
+  })();
+</script>
+</body>
+</html>
