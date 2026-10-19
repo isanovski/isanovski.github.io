@@ -94,10 +94,13 @@
     font-size: 22px; font-weight: 600; line-height: 1.5;
   }
 
-  .skill { margin: 0 0 18px; max-width: 38em; }
-  .skill:last-child { margin-bottom: 0; }
-  .skill h3 { margin: 0; font-size: 17px; font-weight: 600; }
+  .skills-grid { display: grid; grid-template-columns: 1fr; gap: 20px 32px; }
+  .skill { margin: 0; }
+  .skill h3 { margin: 0 0 2px; font-size: 17px; font-weight: 600; }
   .skill p { margin: 0; color: var(--muted); }
+  @media (min-width: 640px) {
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+  }
 
   footer {
     border-top: 1px solid var(--rule);
@@ -173,7 +176,7 @@
 
     <section class="row" id="skills" aria-labelledby="l-skills">
       <div class="label" id="l-skills">skills</div>
-      <div class="value">
+      <div class="value skills-grid">
         <div class="skill">
           <h3>Community management</h3>
           <p>Member engagement and support, onboarding new members, relaying community feedback to project teams, monitoring sentiment, events, AMAs, and giveaways.</p>
