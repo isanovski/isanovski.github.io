@@ -11,64 +11,72 @@
     --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   }
-  @page { size:A4; margin:14mm 15mm 13mm 15mm; }
+  @page { size:A4; margin:10mm 13mm 9mm 13mm; }
   *{ box-sizing:border-box; }
   html{ -webkit-text-size-adjust:100%; }
   body{
     margin:0; background:#fff; color:var(--ink);
-    font:400 9.9pt/1.45 var(--sans);
+    font:400 8.9pt/1.31 var(--sans);
     -webkit-font-smoothing:antialiased;
   }
-  .page{ max-width:186mm; margin:0 auto; }
+  .page{ max-width:180mm; margin:0 auto; }
 
-  h1{
-    margin:0 0 2mm; font-weight:700;
-    font-size:26pt; line-height:1.02; letter-spacing:-.028em;
-  }
-  .role{ margin:0 0 6mm; font-size:11pt; line-height:1.4; color:var(--ink); }
+  h1{ margin:0 0 1.6mm; font-weight:700; font-size:20.5pt; line-height:1.02;
+      letter-spacing:-.028em; }
+  .role{ margin:0 0 3mm; font-size:9.6pt; line-height:1.32; }
 
   dl.contact{
-    margin:0 0 6mm; padding:3.5mm 0 0; border-top:.5pt solid var(--rule);
-    display:grid; grid-template-columns:repeat(3,1fr); gap:3mm 8mm;
+    margin:0 0 3mm; padding:2.2mm 0 0; border-top:.5pt solid var(--rule);
+    display:grid; grid-template-columns:repeat(3,1fr); gap:2.2mm 8mm;
   }
-  dl.contact dt{
-    font:400 7.6pt/1.6 var(--mono); color:var(--muted);
-    text-transform:lowercase;
-  }
-  dl.contact dd{ margin:0; font-size:9.2pt; }
+  dl.contact dt{ font:400 7.6pt/1.6 var(--mono); color:var(--muted);
+                 text-transform:lowercase; }
+  dl.contact dd{ margin:0; font-size:8.7pt; }
   dl.contact a{ color:var(--accent); text-decoration:none; }
 
   section.row{
-    display:grid; grid-template-columns:38mm 1fr; gap:8mm;
-    padding:4mm 0 0; border-top:.5pt solid var(--rule);
-    break-inside:avoid;
+    display:grid; grid-template-columns:31mm 1fr; gap:6mm;
+    padding:2mm 0 0; border-top:.5pt solid var(--rule); break-inside:avoid;
   }
-  .label{
-    font:400 7.6pt/1.7 var(--mono); color:var(--muted);
-    text-transform:lowercase;
-  }
-  .value p{ margin:0 0 2.6mm; }
+  .label{ font:400 7.6pt/1.7 var(--mono); color:var(--muted);
+          text-transform:lowercase; }
+  .value p{ margin:0 0 1.1mm; }
   .value p:last-child{ margin-bottom:0; }
 
-  ul.communities{
-    list-style:none; margin:0 0 2.6mm; padding:0;
-    display:flex; flex-wrap:wrap; gap:0 6mm;
-    font-size:12.5pt; font-weight:600; line-height:1.35;
+  /* entri pengalaman: judul kiri, periode kanan */
+  .job{ margin-bottom:2.4mm; }
+  .job:last-child{ margin-bottom:0; }
+  .job-head{
+    display:grid; grid-template-columns:1fr auto; gap:4mm;
+    align-items:baseline; margin-bottom:.7mm;
   }
+  .job-title{ font-size:9.6pt; font-weight:600; }
+  .job-org{ font-size:9.2pt; color:var(--muted); }
+  .job-when{ font:400 7.8pt/1.5 var(--mono); color:var(--muted);
+             white-space:nowrap; }
 
-  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4mm 9mm; }
-  .skill h3{ margin:0 0 .6mm; font-size:9.9pt; font-weight:600; }
-  .skill p{ margin:0; color:var(--muted); font-size:9.4pt; }
+  ul.b{ list-style:none; margin:.8mm 0 0; padding:0; }
+  ul.b li{ position:relative; padding-left:3.6mm; margin-bottom:.55mm; }
+  ul.b li::before{ content:""; position:absolute; left:0; top:1.3mm;
+    width:1mm; height:1mm; background:var(--accent); border-radius:50%; }
+
+  ul.comm{
+    list-style:none; margin:0 0 1.5mm; padding:0;
+    display:flex; flex-wrap:wrap; gap:0 1.6mm;
+    font-size:9.4pt; font-weight:600;
+  }
+  ul.comm li:not(:last-child)::after{ content:"·"; color:var(--muted);
+    margin-left:1.6mm; }
+
+  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.9mm 7mm; }
+  .skill h3{ margin:0 0 .2mm; font-size:8.7pt; font-weight:600; }
+  .skill p{ margin:0; color:var(--muted); font-size:8.2pt; }
 
   footer{
-    margin-top:6mm; padding-top:3mm; border-top:.5pt solid var(--rule);
+    margin-top:2.4mm; padding-top:1.8mm; border-top:.5pt solid var(--rule);
     font:400 7.6pt/1.6 var(--mono); color:var(--muted);
   }
-
-  @media print{
-    body{ font-size:9.6pt; }
-    .page{ max-width:none; }
-  }
+  @media print{ .page{ max-width:none; } }
 </style>
 </head>
 <body>
@@ -76,7 +84,7 @@
 
   <header>
     <h1>Vladimir Isanovski</h1>
-    <p class="role">Web3 community management, moderation, and content/research.</p>
+    <p class="role">Administration and community operations. Daily records, incoming projects, invoicing, and organizational social media — remote, based in Indonesia (UTC+7).</p>
   </header>
 
   <main>
@@ -85,25 +93,76 @@
       <div><dt>x</dt><dd><a href="https://x.com/isanovski">@isanovski</a></dd></div>
       <div><dt>github</dt><dd><a href="https://github.com/isanovski">github.com/isanovski</a></dd></div>
       <div><dt>location</dt><dd>Indonesia, remote (UTC+7)</dd></div>
-      <div><dt>availability</dt><dd>Part-time or full-time</dd></div>
-      <div><dt>languages</dt><dd>Indonesian, English</dd></div>
+      <div><dt>availability</dt><dd>Full-time, fixed schedule</dd></div>
+      <div><dt>languages</dt><dd>Indonesian (native), English (written)</dd></div>
     </dl>
 
     <section class="row">
-      <div class="label">about</div>
+      <div class="label">profile</div>
       <div class="value">
-        <p>I spent four years in crypto as an active user: following airdrop projects and joining their Discord and Telegram communities. That gave me a working understanding of web3, crypto, and blockchain from the user side: how claims, vesting, and token unlocks work, how to keep a wallet safe, how to read a block explorer, and how to spot a scam before it costs someone their funds.</p>
-        <p>I am looking for roles in community support, moderation, and content/research. I write short, clear answers and check the documentation before replying.</p>
+        <p>Administrative work with a records-first habit: enter it once, enter it correctly, and make it findable later. Four years handling daily data entry, incoming project intake and invoicing in a furniture company, plus a divisional leadership role running an organization's social media. Detail accuracy under volume is the part of the job I actually enjoy.</p>
       </div>
     </section>
 
     <section class="row">
-      <div class="label">communities</div>
+      <div class="label">experience</div>
       <div class="value">
-        <ul class="communities">
-          <li>Sui</li><li>Tabi</li><li>Walrus</li><li>Plume</li><li>Caldera</li><li>Meteora</li>
-        </ul>
-        <p>Previously a regular member, mostly on Discord and Telegram. I have not held an official role such as moderator or ambassador.</p>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Administrative Staff</div>
+              <div class="job-org">Furniture manufacturer — Indonesia</div>
+            </div>
+          </div>
+          <ul class="b">
+            <li>Entered daily transactions and reconciled them at end of day, so the ledger matched the paperwork.</li>
+            <li>Received incoming project orders, logged specifications and client details, then passed them to production with a written brief.</li>
+            <li>Issued and printed invoices; checked amounts, client names and project references before release, and filed each order so it stayed traceable months later.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Head of Media &amp; Information Division (Kominfo)</div>
+              <div class="job-org">Student organization</div>
+            </div>
+          </div>
+          <ul class="b">
+            <li>Ran the organization's social media accounts end to end: planning, writing, publishing, and replying to incoming messages and comments.</li>
+            <li>Coordinated a small team, assigning who publishes what and holding a posting schedule the organization could rely on.</li>
+            <li>Wrote event announcements and adapted the same message per platform; routed questions needing a decision to the relevant division rather than answering vaguely.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Freelance — Graphic Design &amp; Data Entry</div>
+              <div class="job-org">Independent, per-project</div>
+            </div>
+          </div>
+          <ul class="b">
+            <li>Designed layouts and produced visual assets per brief; delivered print- or post-ready files.</li>
+            <li>Handled high-volume data entry and cleanup — deduplicating records, fixing inconsistent formats, keeping totals correct — and scoped, quoted and delivered work directly with clients.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <div class="job-title">Crypto Protocol User &amp; Community Participant</div>
+              <div class="job-org">Independent</div>
+            </div>
+            <div class="job-when">2023 – present</div>
+          </div>
+          <ul class="b">
+            <li>Active across Solana and EVM protocols: airdrops, vesting and claim flows, token locks, testnets, wallet recovery.</li>
+            <li>Know the failure modes first-hand — unclaimed allocations, wrong-wallet submissions, tokens that never unlock, exchange addresses that cannot receive a claim. Screen token safety before interacting: mint and freeze authority, holder concentration, liquidity locks, honeypot and tax checks.</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -111,35 +170,40 @@
       <div class="label">skills</div>
       <div class="value skills-grid">
         <div class="skill">
-          <h3>Community management</h3>
-          <p>Member engagement and support, onboarding new members, relaying community feedback to project teams, monitoring sentiment, events, AMAs, and giveaways.</p>
+          <h3>Administration</h3>
+          <p>Daily data entry at volume, record keeping, invoicing, project intake, document filing, reconciliation, accuracy checks before release.</p>
         </div>
         <div class="skill">
-          <h3>Moderation</h3>
-          <p>Discord and Telegram moderation, enforcing community guidelines, spam, scam, and phishing detection, conflict resolution. Familiar with ambassador programs.</p>
+          <h3>Communication</h3>
+          <p>Written English and Indonesian, replying to public messages, announcements, explaining a process step by step, escalation to the right person.</p>
         </div>
         <div class="skill">
-          <h3>Content and research</h3>
-          <p>Crypto content writing (posts, threads, guides), project research covering tokenomics, team, roadmap, and risks, simplifying complex topics for general audiences, fact-checking.</p>
+          <h3>Social media</h3>
+          <p>Account handling, content planning and scheduling, writing for each platform, graphic design for posts, responding to comments and DMs.</p>
+        </div>
+        <div class="skill">
+          <h3>Tools</h3>
+          <p>Google Sheets and Excel, Google Workspace, Canva, Discord, Telegram. Familiar with Intercom-style ticket queues, Notion and CRM-style records.</p>
         </div>
         <div class="skill">
           <h3>Web3 knowledge</h3>
-          <p>Blockchain, DeFi, and NFTs. Airdrops, vesting, and token unlocks. Wallet security and approvals. Block explorers and on-chain basics. Layer 1 ecosystems.</p>
+          <p>Blockchain, DeFi, NFTs. Airdrops, vesting and token unlocks. Wallet security and approvals. Block explorers and on-chain basics.</p>
         </div>
         <div class="skill">
-          <h3>Trading and DeFi</h3>
-          <p>Crypto trading, degen (early-stage and high-risk on-chain plays), liquidity provider (LP), airdrop farming.</p>
-        </div>
-        <div class="skill">
-          <h3>Working style</h3>
-          <p>Clear written communication, calm under pressure, independent and remote-ready.</p>
+          <h3>Technical</h3>
+          <p>Python scripting for data cleanup and reporting, SQL basics, Linux command line. Currently learning blockchain development.</p>
         </div>
       </div>
     </section>
 
     <section class="row">
-      <div class="label">learning</div>
-      <div class="value">Blockchain development</div>
+      <div class="label">communities</div>
+      <div class="value">
+        <ul class="comm">
+          <li>Sui</li><li>Tabi</li><li>Walrus</li><li>Plume</li><li>Caldera</li><li>Meteora</li>
+        </ul>
+        <p>Active member across these crypto communities, mostly on Discord and Telegram.</p>
+      </div>
     </section>
   </main>
 

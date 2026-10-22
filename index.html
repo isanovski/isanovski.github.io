@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vladimir Isanovski, Web3 Community & Content</title>
-<meta name="description" content="Web3 community management, moderation, and content/research. Four years in the crypto ecosystem. Remote, based in Indonesia (UTC+7).">
+<title>Vladimir Isanovski — Administration &amp; Community Operations</title>
+<meta name="description" content="Administration and community operations. Daily records, incoming projects, invoicing, and organizational social media. Remote, based in Indonesia (UTC+7).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -104,6 +104,33 @@
   .value p { margin: 0 0 12px; max-width: 36em; }
   .value p:last-child { margin-bottom: 0; }
 
+  /* experience entries */
+  .job { margin: 0 0 26px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    gap: 2px 14px; margin-bottom: 6px;
+  }
+  .job-title { font-size: 17px; font-weight: 600; }
+  .job-org { color: var(--muted); }
+  .job-when {
+    font: 400 13px/1.9 var(--mono); color: var(--muted);
+    margin-left: auto; white-space: nowrap;
+  }
+  .job ul {
+    list-style: none; margin: 0; padding: 0;
+    max-width: 36em;
+  }
+  .job li {
+    position: relative; padding-left: 16px; margin-bottom: 7px;
+  }
+  .job li:last-child { margin-bottom: 0; }
+  .job li::before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent);
+  }
+
   .communities {
     list-style: none; margin: 0 0 12px; padding: 0;
     display: flex; flex-wrap: wrap; gap: 2px 26px;
@@ -136,7 +163,7 @@
 
   <header>
     <h1>Vladimir Isanovski</h1>
-    <p class="role">Web3 community management, moderation, and content/research.</p>
+    <p class="role">Administration and community operations. Daily records, incoming projects, invoicing, and organizational social media.</p>
     <a class="dl" href="cv.pdf" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -168,19 +195,104 @@
       </div>
       <div>
         <dt>availability</dt>
-        <dd>Part-time or full-time</dd>
+        <dd>Full-time, fixed schedule</dd>
       </div>
       <div>
         <dt>languages</dt>
-        <dd>Indonesian, English</dd>
+        <dd>Indonesian (native), English (written)</dd>
       </div>
     </dl>
 
     <section class="row" id="about" aria-labelledby="l-about">
-      <div class="label" id="l-about">about</div>
+      <div class="label" id="l-about">profile</div>
       <div class="value">
-        <p>I spent four years in crypto as an active user: following airdrop projects and joining their Discord and Telegram communities. That gave me a working understanding of web3, crypto, and blockchain from the user side: how claims, vesting, and token unlocks work, how to keep a wallet safe, how to read a block explorer, and how to spot a scam before it costs someone their funds.</p>
-        <p>I am looking for roles in community support, moderation, and content/research. I write short, clear answers and check the documentation before replying.</p>
+        <p>Administrative work with a records-first habit: enter it once, enter it correctly, and make it findable later. Four years handling daily data entry, incoming project intake, and invoicing in a furniture company, plus a divisional leadership role running an organization's social media.</p>
+        <p>Detail accuracy under volume is the part of the job I actually enjoy. When something does not add up, I chase it until the record and the paperwork agree.</p>
+      </div>
+    </section>
+
+    <section class="row" id="experience" aria-labelledby="l-experience">
+      <div class="label" id="l-experience">experience</div>
+      <div class="value">
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Administrative Staff</span>
+            <span class="job-org">Furniture manufacturer — Indonesia</span>
+          </div>
+          <ul>
+            <li>Entered daily transactions and reconciled them at end of day, so the ledger matched the paperwork.</li>
+            <li>Received incoming project orders, logged specifications and client details, then passed them to production with a written brief.</li>
+            <li>Issued and printed invoices; checked amounts, client names and project references before release, and filed each order so it stayed traceable months later.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Head of Media &amp; Information Division (Kominfo)</span>
+            <span class="job-org">Student organization</span>
+          </div>
+          <ul>
+            <li>Ran the organization's social media accounts end to end: planning, writing, publishing, and replying to incoming messages and comments.</li>
+            <li>Coordinated a small team, assigning who publishes what and holding a posting schedule the organization could rely on.</li>
+            <li>Wrote event announcements and adapted the same message per platform; routed questions needing a decision to the relevant division rather than answering vaguely.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Freelance — Graphic Design &amp; Data Entry</span>
+            <span class="job-org">Independent, per project</span>
+            <span class="job-when">2023 – present</span>
+          </div>
+          <ul>
+            <li>Designed layouts and produced visual assets per brief; delivered print- or post-ready files.</li>
+            <li>Handled high-volume data entry and cleanup — deduplicating records, fixing inconsistent formats, keeping totals correct — and scoped, quoted and delivered work directly with clients.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Crypto Protocol User &amp; Community Participant</span>
+            <span class="job-org">Independent</span>
+            <span class="job-when">2023 – present</span>
+          </div>
+          <ul>
+            <li>Active across Solana and EVM protocols: airdrops, vesting and claim flows, token locks, testnets, wallet recovery.</li>
+            <li>Know the failure modes first-hand — unclaimed allocations, wrong-wallet submissions, tokens that never unlock, exchange addresses that cannot receive a claim. Screen token safety before interacting: mint and freeze authority, holder concentration, liquidity locks, honeypot and tax checks.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="row" id="skills" aria-labelledby="l-skills">
+      <div class="label" id="l-skills">skills</div>
+      <div class="value skills-grid">
+        <div class="skill">
+          <h3>Administration</h3>
+          <p>Daily data entry at volume, record keeping, invoicing, project intake, document filing, reconciliation, accuracy checks before release.</p>
+        </div>
+        <div class="skill">
+          <h3>Communication</h3>
+          <p>Written English and Indonesian, replying to public messages, announcements, explaining a process step by step, escalation to the right person.</p>
+        </div>
+        <div class="skill">
+          <h3>Social media</h3>
+          <p>Account handling, content planning and scheduling, writing for each platform, graphic design for posts, responding to comments and DMs.</p>
+        </div>
+        <div class="skill">
+          <h3>Tools</h3>
+          <p>Google Sheets and Excel, Google Workspace, Canva, Discord, Telegram. Familiar with Intercom-style ticket queues, Notion, and CRM-style records.</p>
+        </div>
+        <div class="skill">
+          <h3>Web3 knowledge</h3>
+          <p>Blockchain, DeFi, and NFTs. Airdrops, vesting, and token unlocks. Wallet security and approvals. Block explorers and on-chain basics.</p>
+        </div>
+        <div class="skill">
+          <h3>Technical</h3>
+          <p>Python scripting for data cleanup and reporting, SQL basics, Linux command line. Currently learning blockchain development.</p>
+        </div>
       </div>
     </section>
 
@@ -195,47 +307,12 @@
           <li>Caldera</li>
           <li>Meteora</li>
         </ul>
-        <p>Previously a regular member, mostly on Discord and Telegram. I have not held an official role such as moderator or ambassador.</p>
+        <p>Active member across these crypto communities, mostly on Discord and Telegram.</p>
       </div>
     </section>
-
-    <section class="row" id="skills" aria-labelledby="l-skills">
-      <div class="label" id="l-skills">skills</div>
-      <div class="value skills-grid">
-        <div class="skill">
-          <h3>Community management</h3>
-          <p>Member engagement and support, onboarding new members, relaying community feedback to project teams, monitoring sentiment, events, AMAs, and giveaways.</p>
-        </div>
-        <div class="skill">
-          <h3>Moderation</h3>
-          <p>Discord and Telegram moderation, enforcing community guidelines, spam, scam, and phishing detection, conflict resolution. Familiar with ambassador programs.</p>
-        </div>
-        <div class="skill">
-          <h3>Content and research</h3>
-          <p>Crypto content writing (posts, threads, guides), project research covering tokenomics, team, roadmap, and risks, simplifying complex topics for general audiences, fact-checking.</p>
-        </div>
-        <div class="skill">
-          <h3>Web3 knowledge</h3>
-          <p>Blockchain, DeFi, and NFTs. Airdrops, vesting, and token unlocks. Wallet security and approvals. Block explorers and on-chain basics. Layer 1 ecosystems.</p>
-        </div>
-        <div class="skill">
-          <h3>Trading and DeFi</h3>
-          <p>Crypto trading, degen (early-stage and high-risk on-chain plays), liquidity provider (LP), airdrop farming.</p>
-        </div>
-        <div class="skill">
-          <h3>Working style</h3>
-          <p>Clear written communication, calm under pressure, independent and remote-ready.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="row">
-      <div class="label">learning</div>
-      <div class="value">Blockchain development</div>
-    </div>
   </main>
 
-  <footer>Last updated October 2026</footer>
+  <footer>Last updated October 2026 · vlad.isanovski@gmail.com</footer>
 </div>
 </body>
 </html>
