@@ -209,6 +209,7 @@
   .tab[aria-selected="true"] { color: var(--bg); background: var(--acc); }
   .tab .idx { color: var(--acc-4); margin-right: 8px; }
   .tab[aria-selected="true"] .idx { color: var(--bg); }
+  .tab .sm { display: none; }
 
   .panel { display: none; }
   .panel.is-active { display: block; animation: wipe .28s steps(4, end); }
@@ -284,6 +285,113 @@
   .contact-cell dt { font-size: 17px; color: var(--acc-4); letter-spacing: .08em; }
   .contact-cell dd { margin: 6px 0 0; font-size: 21px; overflow-wrap: anywhere; }
 
+  /* ---------- app-window chrome ---------- */
+  .window-bar {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--panel-2); padding: 8px 12px; margin-bottom: 10px;
+    font-size: 17px; color: var(--muted);
+  }
+  .window-dots { display: flex; gap: 6px; flex: none; }
+  .window-dots i { width: 10px; height: 10px; background: var(--acc-3); display: block; }
+  .window-dots i:nth-child(2) { background: var(--acc); }
+  .window-dots i:nth-child(3) { background: var(--acc-2); }
+  .window-bar .wb-title { color: var(--ink); }
+  .window-bar .wb-path { margin-left: auto; color: var(--acc-4); }
+
+  /* ============================================================
+     DEVICE: MOBILE — portrait / touch.
+     One column, big tap targets, section tabs become a fixed
+     bottom HUD bar so the thumb can reach them.
+     ============================================================ */
+  @media (max-width: 640px) {
+    .wrap { padding: 12px 12px 104px; }
+
+    .window-bar { font-size: 15px; padding: 7px 10px; margin-bottom: 8px; }
+    .window-bar .wb-path { display: none; }
+
+    .topbar { font-size: 16px; padding: 7px 10px; gap: 6px 10px; }
+    .topbar .sep { display: none; }
+    .tool { font-size: 16px; padding: 11px 12px; }   /* comfortable tap target */
+
+    header.hero { grid-template-columns: 1fr; gap: 14px; text-align: center; }
+    .sprite-wrap { justify-items: center; }
+    .sprite { --spx: 4px; }
+    h1 { font-size: clamp(14px, 5.6vw, 22px); text-shadow: 2px 2px 0 var(--acc-3); }
+    .role { font-size: 20px; margin-inline: auto; }
+
+    .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-actions .btn {
+      justify-content: center; text-align: center; font-size: 18px; padding: 15px 8px;
+    }
+    .hero-actions .btn:first-child { grid-column: 1 / -1; }
+
+    .ticker { font-size: 16px; margin: 14px 0 16px; }
+
+    /* tabs -> fixed bottom HUD */
+    .tabs {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px;
+      margin: 0; padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+      background: var(--panel); border-top: var(--px) solid var(--line);
+    }
+    .tab {
+      font-size: 7px; padding: 9px 2px; box-shadow: none;
+      border: 2px solid transparent; width: 100%;
+    }
+    .tab .idx { display: block; margin: 0 0 7px; font-size: 9px; }
+    .tab[aria-selected="true"] { border-color: var(--acc); }
+    .tab .lg { display: none; }
+    .tab .sm { display: inline; }
+
+    .card { padding: 14px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .skill-grid { grid-template-columns: 1fr; }
+    .comms { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .acc-head { font-size: 20px; padding: 16px 8px; }
+    .acc-head .when { margin-left: 0; }
+    .acc-body { padding-left: 26px; }
+    footer { font-size: 16px; }
+  }
+
+  /* ============================================================
+     DEVICE: LAPTOP / DESKTOP — wide layout, window chrome,
+     multi-column grids, larger sprite, three-column skills.
+     ============================================================ */
+  @media (min-width: 1024px) {
+    .wrap { max-width: 1180px; padding: 24px 32px 70px; }
+
+    .window-bar { padding: 9px 14px; font-size: 18px; }
+    .sprite { --spx: 7px; }
+    header.hero { grid-template-columns: 240px 1fr; gap: 36px; align-items: center; }
+    h1 { font-size: clamp(26px, 3.4vw, 44px); }
+    .role { font-size: 24px; }
+
+    .tab { font-size: 10px; padding: 15px 18px; }
+    .tab .sm { display: none; }
+
+    /* profile: text + stats side by side */
+    .profile-card { display: grid; grid-template-columns: 1.45fr 1fr; gap: 32px; align-items: start; }
+    .profile-card h2 { grid-column: 1 / -1; }
+    .profile-card .stats { grid-template-columns: 1fr 1fr; margin-top: 0; }
+
+    .skill-grid { grid-template-columns: repeat(3, 1fr); }
+    .comms { grid-template-columns: repeat(6, 1fr); }
+    .contact-grid { grid-template-columns: repeat(3, 1fr); }
+    .acc-head { font-size: 23px; padding: 16px 14px; }
+    .acc-body { padding-left: 44px; }
+    footer { justify-content: space-between; }
+  }
+
+  /* touch devices: no sticky hover states */
+  @media (hover: none) {
+    .skill:hover { transform: none; background: var(--panel); }
+    .comm:hover { background: var(--panel); color: var(--ink); }
+    .comm:hover .dot { background: var(--acc-3); }
+    .chip:hover { border-color: var(--line); color: var(--acc-4); }
+  }
+
   /* help modal */
   .modal {
     position: fixed; inset: 0; z-index: 80; display: grid; place-items: center;
@@ -337,6 +445,13 @@
 <div class="crt" id="crt" aria-hidden="true"></div>
 
 <div class="wrap">
+  <!-- ============ app window chrome ============ -->
+  <div class="window-bar px" role="presentation">
+    <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="wb-title">vlad.isanovski — profile</span>
+    <span class="wb-path">~/career/index.html</span>
+  </div>
+
   <!-- ============ top status bar ============ -->
   <div class="topbar px" role="region" aria-label="Status bar">
     <span>LO:<b class="val">JAVA</b></span>
@@ -378,20 +493,22 @@
 
   <!-- ============ tabs ============ -->
   <div class="tabs" role="tablist" aria-label="Sections" id="tabs">
-    <button class="tab px" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="true"><span class="idx">1</span>PROFILE</button>
-    <button class="tab px" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span class="idx">2</span>EXPERIENCE</button>
-    <button class="tab px" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1"><span class="idx">3</span>SKILLS</button>
-    <button class="tab px" role="tab" id="tab-communities" aria-controls="panel-communities" aria-selected="false" tabindex="-1"><span class="idx">4</span>COMMUNITIES</button>
-    <button class="tab px" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><span class="idx">5</span>CONTACT</button>
+    <button class="tab px" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="true"><span class="idx">1</span><span class="lg">PROFILE</span><span class="sm">PROF</span></button>
+    <button class="tab px" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span class="idx">2</span><span class="lg">EXPERIENCE</span><span class="sm">EXP</span></button>
+    <button class="tab px" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1"><span class="idx">3</span><span class="lg">SKILLS</span><span class="sm">SKIL</span></button>
+    <button class="tab px" role="tab" id="tab-communities" aria-controls="panel-communities" aria-selected="false" tabindex="-1"><span class="idx">4</span><span class="lg">COMMUNITIES</span><span class="sm">COMM</span></button>
+    <button class="tab px" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><span class="idx">5</span><span class="lg">CONTACT</span><span class="sm">MAIL</span></button>
   </div>
 
   <main id="main">
     <!-- PROFILE -->
     <section class="panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile" tabindex="0">
-      <div class="card px">
+      <div class="card px profile-card">
         <h2>PROFILE</h2>
-        <p class="type-line" data-type id="type0"></p>
-        <p class="type-line" data-type id="type1"></p>
+        <div class="profile-text">
+          <p class="type-line" data-type id="type0"></p>
+          <p class="type-line" data-type id="type1"></p>
+        </div>
         <div class="stats">
           <div class="stat px"><b>4 YRS</b><span>admin &amp; records</span></div>
           <div class="stat px"><b>2 ROLES</b><span>staff &amp; division head</span></div>
@@ -676,7 +793,14 @@
       t.tabIndex = on ? 0 : -1;
       var panel = document.getElementById(t.getAttribute("aria-controls"));
       panel.classList.toggle("is-active", on);
-      if (on && focus) t.focus();
+      if (on) {
+        if (focus) t.focus();
+        // bring the panel into view (mainly matters on the mobile layout)
+        var top = panel.getBoundingClientRect().top + window.pageYOffset - 16;
+        if (window.pageYOffset > top) {
+          window.scrollTo({ top: top, behavior: reduced ? "auto" : "smooth" });
+        }
+      }
     });
     if (id === "tab-profile") runTypewriter();
   }
