@@ -15,20 +15,23 @@
     --accent: #1d4ed8;
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: #eceef1; color: var(--ink);
-    font: 400 14px/1.55 "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0; background: #e9ebee; color: var(--ink);
+    font: 400 14px/1.6 "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   a { color: var(--ink); text-decoration: none; }
   .sheet {
     width: 210mm; min-height: 297mm; margin: 24px auto;
     background: #fff; padding: 15mm 16mm 13mm;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
   }
   header { padding-bottom: 11px; border-bottom: 2.5px solid var(--ink); margin-bottom: 13px; }
-  h1 { margin: 0 0 3px; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+  h1 { margin: 0 0 3px; font-size: clamp(26px, 6vw, 30px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
   .tag { margin: 0 0 9px; font-size: 14.5px; color: var(--muted); }
-  .contact { display: flex; flex-wrap: wrap; gap: 2px 16px; font-size: 12px; color: var(--muted); }
+  .contact { display: flex; flex-wrap: wrap; gap: 3px 16px; font-size: 12px; line-height: 1.7; color: var(--muted); }
+  .contact span { overflow-wrap: anywhere; }
   h2 {
     margin: 15px 0 7px; font-size: 12px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
@@ -49,8 +52,10 @@
     .sheet { margin: 0; box-shadow: none; }
   }
   @media (max-width: 800px) {
-    .sheet { width: auto; min-height: 0; margin: 0; padding: 20px 16px; }
-    .skills { grid-template-columns: 1fr; }
+    body { background: #fff; }
+    .sheet { width: auto; min-height: 0; margin: 0; padding: 24px 18px; box-shadow: none; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -70,13 +75,13 @@
   </header>
 
   <h2>Profile</h2>
-  <p>Remote community operations, user support, and administration professional with five years of combined experience across administration, organizational media, and freelance work, including three years in Web3. I currently work as administrative staff at George Furniture. Before that I led the media and information division of a regional student association at university level. In Web3 communities I participate as a member and contributor and regularly answer other users' questions. Fast learner, accountable, and quick to adapt to new tools, and AI tools are part of my daily workflow. Open to full-time, part-time, or freelance work, with flexible hours.</p>
+  <p>Remote community operations, user support, and administration professional with five years of combined experience across administration, organizational media, and freelance work, including three years in Web3. Most recently I worked as administrative staff at George Furniture. Before that I led the media and information division of a regional student association at university level. In Web3 communities I participate as a member and contributor and regularly answer other users' questions. Fast learner, accountable, and quick to adapt to new tools, and AI tools are part of my daily workflow. Available to start immediately for full-time, part-time, or freelance work, with flexible hours.</p>
 
   <h2>Experience</h2>
 
   <div class="job">
     <h3>Administrative Staff</h3>
-    <p class="org">George Furniture, Indonesia · 2025 to Present</p>
+    <p class="org">George Furniture, Indonesia · 2025 to 2026</p>
     <ul>
       <li>Process daily sales transactions and end-of-day reconciliation so records match source paperwork.</li>
       <li>Manage project order intake and brief production in writing. I verify invoices before release and keep orders traceable.</li>
@@ -108,7 +113,7 @@
   </div>
 
 <h2>Web3 Communities and Projects</h2>
-  <p>Projects and communities where I participated as a member and contributor during their airdrop campaigns. Sui, Tabi, Walrus, Plume, Caldera, Meteora, Grass, Stork, Tabi Chain, Inco Network, ORO AI, Push Chain, Chakra Labs, Hashi (Sui), QMS Network, Polyester DEX, Relay, Z Mine.</p>
+  <p>Projects and communities where I participated as a member and contributor during their airdrop campaigns. Sui, Tabi, Walrus, Plume, Caldera, Meteora, Grass, Stork, Tabi Chain, Inco Network, ORO AI, etc.</p>
 
   <h2>Skills</h2>
   <dl class="skills">
